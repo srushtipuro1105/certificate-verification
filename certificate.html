@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #fff;
+      padding: 50px;
+    }
+    .info {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .info h2 {
+      margin-bottom: 20px;
+    }
+    .info p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #28a745;
+      color: white;
+    }
+    svg {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <h2>Certificate Details</h2>
+    <p><strong>Certificate ID:</strong> TH09590</p>
+    <p><strong>Name:</strong> Srushti Jayant Puro</p>
+    <p><strong>Domain:</strong> Web Design & Development</p>
+    <p><strong>Start Date:</strong> 01/05/2025</p>
+    <p><strong>End Date:</strong> 31/05/2025</p>
+    <p><strong>Batch Name:</strong> Batch 88</p>
+    <p><strong>Certificate Type:</strong> Internship Certificate</p>
+    <button onclick="history.back()">Go Back</button>
+    <button onclick="window.location.href='https://technohacks.co.in/internship'">Apply for Internship</button>
+    <svg id="barcode"></svg>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <script>
+    JsBarcode("#barcode", "https://yourusername.github.io/certificate-verification/certificate.html?id=TH09590", {
+      format: "CODE128",
+      lineColor: "#000",
+      width: 2,
+      height: 50,
+      displayValue: true
+    });
+</html>
+  </script>
+</body>

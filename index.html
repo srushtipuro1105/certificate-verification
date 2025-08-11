@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      padding: 50px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .verify { background-color: #007BFF; color: white; }
+    .back, .apply { background-color: #28a745; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TechnoHacks</h1>
+    <p>LET'S GROW TOGETHER</p>
+    <h2>Certificate Verification Portal</h2>
+    <input type="text" id="certId" placeholder="Enter Certificate ID">
+    <br>
+    <button class="verify" onclick="verify()">Verify</button>
+    <button class="back" onclick="history.back()">Go Back</button>
+    <button class="apply" onclick="window.location.href='https://technohacks.co.in/internship'">Apply for Internship</button>
+  </div>
+
+  <script>
+    function verify() {
+      const id = document.getElementById('certId').value.trim();
+      if (id === 'TH09590') {
+        window.location.href = 'certificate.html?id=' + id;
+      } else {
+        alert('Invalid Certificate ID');
+      }
+    }
+  </script>
+</body>
+</html>
