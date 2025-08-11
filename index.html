@@ -3,36 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Certificate Verification</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       text-align: center;
       background: #f4f4f4;
       padding: 50px;
+      margin: 0;
     }
     .container {
       background: white;
-      padding: 30px;
-      border-radius: 10px;
+      padding: 40px 30px;
+      border-radius: 12px;
       display: inline-block;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 28px;
+      color: #ff3e6c;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #333;
     }
     input {
-      padding: 10px;
-      width: 80%;
-      margin: 20px 0;
+      padding: 12px;
+      width: 90%;
       font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
     }
     button {
-      padding: 10px 20px;
-      margin: 10px;
+      padding: 12px 24px;
       font-size: 16px;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      margin: 10px 5px;
+      transition: background 0.3s ease;
     }
-    .verify { background-color: #007BFF; color: white; }
+    .verify { background-color: #ff3e6c; color: white; }
+    .verify:hover { background-color: #e6365f; }
     .back, .apply { background-color: #28a745; color: white; }
+    .back:hover, .apply:hover { background-color: #218838; }
   </style>
 </head>
 <body>
