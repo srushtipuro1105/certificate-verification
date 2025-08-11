@@ -9,7 +9,7 @@
       font-family: 'Poppins', sans-serif;
       background: #fff;
       margin: 0;
-      padding: 50px;
+      padding: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,15 +23,30 @@
       max-width: 600px;
       width: 100%;
     }
-    .info h2 {
-      font-size: 24px;
-      color: #ff3e6c;
+    .verified-badge {
+      font-size: 48px;
+      color: #28a745;
+    }
+    .verified-text {
+      font-size: 20px;
+      color: #28a745;
+      font-weight: 600;
       margin-bottom: 30px;
+    }
+    .section-title {
+      font-size: 22px;
+      color: #6f42c1;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
     .info p {
       font-size: 18px;
       margin: 10px 0;
       color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
     .info p strong {
       color: #555;
@@ -57,16 +72,18 @@
 </head>
 <body>
   <div class="info">
-    <h2>Certificate Details</h2>
-    <p><strong>Certificate ID:</strong> TH09590</p>
-    <p><strong>Name:</strong> Srushti Jayant Puro</p>
-    <p><strong>Domain:</strong> Web Design & Development</p>
-    <p><strong>Start Date:</strong> 01/05/2025</p>
-    <p><strong>End Date:</strong> 31/05/2025</p>
-    <p><strong>Batch Name:</strong> Batch 88</p>
-    <p><strong>Certificate Type:</strong> Internship Certificate</p>
-    <button onclick="history.back()">Go Back</button>
-    <button onclick="window.location.href='https://technohacks.co.in/internship'">Apply for Internship</button>
+    <div class="verified-badge">✅</div>
+    <div class="verified-text">Certificate Successfully Verified!</div>
+    <div class="section-title">Certificate Details</div>
+    <p>🆔 <strong>Certificate ID:</strong> TH09590</p>
+    <p>👤 <strong>Name:</strong> Srushti Jayant Puro</p>
+    <p>💻 <strong>Domain:</strong> Web Design & Development</p>
+    <p>📅 <strong>Start Date:</strong> 01/05/2025</p>
+    <p>📅 <strong>End Date:</strong> 31/05/2025</p>
+    <p>🎓 <strong>Batch Name:</strong> Batch 88</p>
+    <p>🏅 <strong>Certificate Type:</strong> Internship Certificate</p>
+    <button onclick="history.back()">← Go Back</button>
+    <button onclick="window.location.href='https://technohacks.co.in/internship'">🎓 Apply for Internship</button>
     <svg id="barcode"></svg>
   </div>
 
