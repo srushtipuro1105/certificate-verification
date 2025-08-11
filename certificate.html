@@ -7,17 +7,19 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      text-align: center;
       background: #fff;
-      padding: 50px;
       margin: 0;
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .info {
       background: #f9f9f9;
-      padding: 40px 30px;
+      padding: 40px;
       border-radius: 12px;
-      display: inline-block;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
       max-width: 600px;
       width: 100%;
     }
@@ -68,6 +70,15 @@
     <svg id="barcode"></svg>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <script>
+    JsBarcode("#barcode", "https://srushtipuro1105.github.io/certificate-verification/certificate.html?id=TH09590", {
+      format: "CODE128",
+      lineColor: "#000",
+      width: 2,
+      height: 50,
+      displayValue: true
+    });
+  </script>
 </body>
 </html>
-
