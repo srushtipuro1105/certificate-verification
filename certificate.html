@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Certificate Info</title>
+  <title>Certificate Verification Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -11,8 +11,58 @@
       margin: 0;
       padding: 40px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header img {
+      width: 100px;
+      height: auto;
+    }
+    .header h1 {
+      font-size: 32px;
+      margin: 10px 0;
+      color: #000;
+    }
+    .header p {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+    }
+    .header h2 {
+      font-size: 20px;
+      color: #6f42c1;
+      margin-top: 10px;
+    }
+    .portal-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .search-box input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #6f42c1;
+      border-radius: 6px;
+      width: 300px;
+    }
+    .search-box button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
     .info {
       background: #f9f9f9;
@@ -24,8 +74,18 @@
       width: 100%;
     }
     .verified-badge {
-      font-size: 48px;
-      color: #28a745;
+      width: 80px;
+      height: 80px;
+      background-color: #28a745;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+    }
+    .verified-badge span {
+      font-size: 40px;
+      color: white;
     }
     .verified-text {
       font-size: 20px;
@@ -51,7 +111,7 @@
     .info p strong {
       color: #555;
     }
-    button {
+    button.action {
       padding: 12px 24px;
       margin: 15px 5px;
       font-size: 16px;
@@ -62,7 +122,7 @@
       color: white;
       transition: background 0.3s ease;
     }
-    button:hover {
+    button.action:hover {
       background-color: #218838;
     }
     svg {
@@ -71,8 +131,23 @@
   </style>
 </head>
 <body>
-  <div class="info">
-    <div class="verified-badge">✅</div>
+
+  <div class="header">
+    <img src="https://srushtipuro1105.github.io/certificate-verification/assets/logo.png" alt="TechnoHacks Logo">
+    <h1>TECHNOHACKS</h1>
+    <p>LET'S GROW TOGETHER</p>
+    <h2>TechnoHacks Solutions Pvt. Ltd.</h2>
+  </div>
+
+  <div class="portal-title">Certificate Verification Portal</div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Enter Certificate ID" id="certificateId">
+    <button onclick="verifyCertificate()">Verify</button>
+  </div>
+
+  <div class="info" id="certificateInfo" style="display: none;">
+    <div class="verified-badge"><span>✔</span></div>
     <div class="verified-text">Certificate Successfully Verified!</div>
     <div class="section-title">Certificate Details</div>
     <p>🆔 <strong>Certificate ID:</strong> TH09590</p>
@@ -82,11 +157,10 @@
     <p>📅 <strong>End Date:</strong> 31/05/2025</p>
     <p>🎓 <strong>Batch Name:</strong> Batch 88</p>
     <p>🏅 <strong>Certificate Type:</strong> Internship Certificate</p>
-    <button onclick="history.back()">← Go Back</button>
-    <button onclick="window.location.href='https://technohacks.co.in/internship'">🎓 Apply for Internship</button>
+    <button class="action" onclick="history.back()">← Go Back</button>
+    <button class="action" onclick="window.location.href='https://technohacks.co.in/internship'">🎓 Apply for Internship</button>
     <svg id="barcode"></svg>
   </div>
 
 </body>
 </html>
-
